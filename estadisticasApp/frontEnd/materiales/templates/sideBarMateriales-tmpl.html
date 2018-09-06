@@ -1,0 +1,28 @@
+<div class="nav navbar-inverse sideBar">
+  <div class="sideBarContent">
+
+    <h3>Materiales</h3>
+    <ul>
+      <li class="sideBarLink"><a ui-sref="seguimiento.estadisticas"><img src="estadisticasApp/frontEnd/common/images/btn-estadisticas.gif" alt="" /></a></li>
+      <li class="sideBarLink"><a ui-sref="seguimiento.materiales"><img src="estadisticasApp/frontEnd/common/images/btn-materiales.gif" alt="" /></a></li>
+      <li class="sideBarLink"><a ui-sref="seguimiento"><img src="estadisticasApp/frontEnd/common/images/btn-seguimiento.gif" alt="" /></a></li>
+      <li class="sideBarLink"><a ui-sref="seguimiento.zonas"><img src="estadisticasApp/frontEnd/common/images/btn-zonas.gif" alt="" /></a></li>
+    </ul>
+    <hr>
+    <div class="form-group">
+      <label for="">Desde</label>
+      <datetimepicker date-format="dd-MM-yyyy" show-meridian="false" ng-model="sideBarMaterialesController.dateFrom"></datetimepicker>
+    </div>
+    <div class="form-group">
+      <label for="">Hasta</label>
+      <datetimepicker date-format="dd-MM-yyyy" show-meridian="false" ng-model="sideBarMaterialesController.dateTo"></datetimepicker>
+    </div>
+    <div class="form-group">
+      <input type="button" name="name" value="Definir Zona" class="btn btn-default btn-lg form-control" ng-click="sideBarMaterialesController.openModal()">
+      <input type="button" name="name" value="Enviar" class="btn btn-default btn-lg form-control" ng-click="sideBarMaterialesController.searchByDate()">
+      <input type="button" name="name" value="Exportar" class="btn btn-default btn-lg form-control" >
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+  <div class="clear"></div>

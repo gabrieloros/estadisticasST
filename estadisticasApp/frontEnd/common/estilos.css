@@ -1,0 +1,156 @@
+body, html
+{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(102, 97, 95) !important;
+}
+
+*
+{
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.barCharts
+{
+  margin-left: 280px;
+  margin-top: 3%;
+  height: 50%;
+}
+
+.pieChartsDiv
+{
+  width: 80%;
+  margin-left: 20%;
+  margin-top: 3%;
+  background-color: #5A5966;
+}
+
+.pieCharts
+{
+  width: 33%;
+  display: inline-block;
+}
+
+.tiempo-por-reclamo{
+  width: 13%;
+  height: 250px !important;
+  margin-left: 10%;
+  margin-top: 80px;
+  z-index: 500px;
+  text-align:center;
+  display: inline-block;
+  float: left;
+  margin-right: 10%;
+  background-color: #84A7D5;
+  color:#5A5966;
+
+}
+
+
+ul, li, h3, label, td
+{
+  color: #FFF;
+  font-weight: lighter;
+}
+
+#infoWindow{
+  color:black !important;
+}
+
+.clear
+{
+  clear: both;
+}
+
+.sideBar
+{
+  z-index: 2;
+  border-radius: 6px;
+
+
+}
+.sideBar1
+{
+  z-index: 2;
+  border-radius: 6px;
+  width:357px;
+
+}
+.scroll {
+
+  display: flex;/*Se ajuste dinamicamente al tamano del dispositivo**/
+  max-height: 45vh; /*El alto que necesitemos**/
+  overflow-y: auto; /**El scroll verticalmente cuando sea necesario*/
+  overflow-x: hidden;/*Sin scroll horizontal*/
+}
+
+.modalMap
+{
+  height: 100% !important;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+}
+
+.map
+{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  min-height: 874px;
+  top: 0px;
+  left: 0px;
+}
+
+.sideBarContent
+{
+  margin-left: 4px;
+  margin-right: 4px;
+  align:center;
+}
+
+.sideBarLink
+{
+  display: inline;
+}
+
+.imgPersona
+{
+  width: 70px;
+  height: 70px;
+}
+
+.credits
+{
+  color: #666;
+}
+
+#title
+{
+  color: #AAA7AD;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.barCharts
+{
+  background: #505351;
+}
+.claimStateBajaImg{
+  content: url(../common/images/iconosEstadoReclamos/estado_baja.png)
+}
+.claimStateOkImg{
+  content: url(../common/images/iconosEstadoReclamos/estado_ok.png)
+}
+.claimStateSinVerImg{
+  content: url(../common/images/iconosEstadoReclamos/estado_sinver.png)
+}
+.claimStateVistoImg{
+  content: url(../common/images/iconosEstadoReclamos/estado_visto.png)
+}

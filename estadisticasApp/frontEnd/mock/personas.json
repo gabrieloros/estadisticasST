@@ -1,0 +1,33 @@
+{
+  "personas": [
+    {
+      "id": 1,
+      "nombre": "Juan"
+    },
+    {
+      "id": 2,
+      "nombre": "Gabriel"
+    },
+    {
+      "id": 3,
+      "nombre": "Sebastian"
+    },
+    {
+      "id": 4,
+      "nombre": "Pedro"
+    },
+    {
+      "id": 5,
+      "nombre": "Tomas"
+    },
+    {
+      "id": 6,
+      "nombre": "Mario"
+    },
+    {
+      "id": 7,
+      "nombre": "Diego"
+    }
+
+  ]
+}

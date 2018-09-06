@@ -1,0 +1,126 @@
+
+
+$('#reclamosXhora').highcharts({
+        chart: {
+            type: 'column'
+        },
+        colors:['#84A7D5'],
+        title: {
+            text: 'Tiempo por reclamo'
+        },
+        xAxis: {
+            type: 'category',
+            labels: {
+                rotation: -45,
+                style: {
+                    fontSize: '13px',
+                    fontFamily: 'Verdana, sans-serif'
+                }
+            }
+        },
+        legend: {
+            enabled: true
+        },
+        tooltip: {
+           // pointFormat: 'Id reclamo: ' + estadisticasOperarioController.tiempoPorReclamo.labels[this.x]
+            formatter: function() {
+                return 'Reclamo: <b>'+ estadisticasOperarioController.tiempoPorReclamo.labels[this.x];
+            }
+        },
+        series: [{
+            name: '',
+            data: estadisticasOperarioController.tiempoPorReclamo.series,
+            dataLabels: {
+                enabled: false,
+                rotation: -90,
+                color: '#FFFFFF',
+                align: 'right',
+                format: '{point.y:.1f}', // one decimal
+                y: 10, // 10 pixels down from the top
+                style: {
+                    fontSize: '13px',
+                    fontFamily: 'Verdana, sans-serif'
+                }
+            }
+        }]
+    });
+
+
+
+
+
+
+
+
+
+
+
+    $(function () {
+            $('#reclamosXhora').highcharts({
+                chart: {
+                    type: 'area',
+                    zoomType: 'x'
+                },
+                title: {
+                    text: 'Tiempo por reclamo'
+                },
+
+                xAxis: {
+                    type: 'category',
+                    labels: {
+                        rotation: -45,
+                        style: {
+                            fontSize: '13px',
+                            fontFamily: 'Verdana, sans-serif'
+                        }
+                    }
+                },
+                yAxis: {
+                    title: {
+                        text: 'Values'
+                    }
+                },
+                legend: {
+                    enabled: true
+                },
+                tooltip: {
+                    // pointFormat: 'Id reclamo: ' + estadisticasOperarioController.tiempoPorReclamo.labels[this.x]
+                    formatter: function() {
+                        return 'Reclamo: <b>'+ estadisticasOperarioController.tiempoPorReclamo.labels[this.x]+
+                            '<br> Tiempo: <b>'+estadisticasOperarioController.tiempoPorReclamo.series[this.x];
+                    }
+                },
+                plotOptions: {
+                    area: {
+                        fillColor: {
+                            color: '#FFFFFF',
+                            linearGradient: {
+                                x1: 0,
+                                y1: 0,
+                                x2: 0,
+                                y2: 1
+                            },
+                            stops: [
+                                [0, Highcharts.getOptions().colors[0]],
+                                [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
+                            ]
+                        },
+                        marker: {
+                            radius: 2
+                        },
+                        lineWidth: 1,
+                        states: {
+                            hover: {
+                                lineWidth: 1
+                            }
+                        },
+                        threshold: null
+                    }
+                },
+
+                series: [{
+                    name: 'ID Reclamo',
+                    data: estadisticasOperarioController.tiempoPorReclamo.series
+                }]
+            });
+    });

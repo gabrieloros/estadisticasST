@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta name="google-site-verification" content="M9WQgj-9keU5mwXHKkeFr5VnwGcV3VJqfIuCYUwsEEY" />
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <link rel="icon" href="estadisticasApp/frontEnd/common/images/nav_icon.png">
+  <body ng-app="estadisticasApp">
+    <link rel="stylesheet" href="bower_components/bootstrap\dist\css\bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="bower_components/jquery-ui\themes\smoothness\jquery-ui.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="bower_components/angular-bootstrap\ui-bootstrap-csp.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="bower_components/angular-ui-bootstrap-datetimepicker\datetimepicker.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="estadisticasApp/frontEnd\common\estilos.css" media="screen" title="no title" charset="utf-8">
+
+   <link rel="stylesheet" href="bower_components/angular-loading-bar\src\loading-bar.css" media="screen" title="no title" charset="utf-8">
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12 map" ui-view="map" id="map"></div>
+        <div class="col-lg-3 sideBar" ui-view="sideBar"></div>
+        
+      </div>
+    </div>
+
+
+
+    <script type="text/javascript" src="bower_components/jquery\dist\jquery.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular\angular.min.js"></script>
+    <script type="text/javascript" src="bower_components/bootstrap\dist\js\bootstrap.min.js"></script>
+    <script type="text/javascript" src="bower_components/lodash\lodash.min.js"></script>
+    <script type="text/javascript" src="bower_components/jquery-ui\jquery-ui.js"></script>
+    <script type="text/javascript" src="bower_components/angular-bootstrap\ui-bootstrap-tpls.js"></script>
+    <script type="text/javascript" src="bower_components/angular-ui-bootstrap-datetimepicker\datetimepicker.js"></script>
+    <script type="text/javascript" src="bower_components/jquery-ui\ui\datepicker.js"></script>
+    <script type="text/javascript" src="bower_components/angular-ui-router\release\angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-ui-date\src\date.js"></script>
+    <script type="text/javascript" src="bower_components/angular-loading-bar/src/loading-bar.js"></script>
+    <script type="text/javascript" src="estadisticasApp/frontEnd\common\estadisticasApp.js"></script>
+    <script type="text/javascript" src="estadisticasApp/frontEnd\common\CONSTANTS.js"></script>
+    <script type="text/javascript" src="bower_components/ngstorage/ngStorage.min.js"></script>
+    <script type="text/javascript" src="estadisticasApp/frontEnd\estadisticas\estadisticas.js"></script>
+    <script type="text/javascript" src="estadisticasApp/frontEnd\login\login.js"></script>
+    <script type="text/javascript" src="estadisticasApp/frontEnd\login\loginService.js"></script>
+    <script type="text/javascript" src="estadisticasApp/frontEnd\login\loginController.js"></script>
+    <script type="text/javascript" src="estadisticasApp/frontEnd\materiales\materiales.js"></script>
+    <script type="text/javascript" src="estadisticasApp/frontEnd\zonas\zonas.js"></script>
+    <script type="text/javascript" src="estadisticasApp/frontEnd\map/seguimiento\seguimientoMapController.js"></script>
+    <script type="text/javascript" src="estadisticasApp/frontEnd\map/seguimiento\seguimientoEmpleado\mapSeguimientoEmpleadoController.js"></script>
+    <script type="text/javascript" src="estadisticasApp/frontEnd\materiales\sideBarMaterialesController.js"></script>
+    <script type="text/javascript" src="estadisticasApp/frontEnd\materiales\materialesContentController.js"></script>
+    <script type="text/javascript" src="estadisticasApp/frontEnd\seguimiento\seguimientoController.js"></script>
+    <script type="text/javascript" src="estadisticasApp/frontEnd\seguimiento\sideBarSegPersonaController.js"></script>
+    <script type="text/javascript" src="estadisticasApp/frontEnd\zonas\zonasController.js"></script>
+    
+    <script type="text/javascript" src="estadisticasApp/frontEnd\claims\claimsService.js"></script>
+    <script type="text/javascript" src="estadisticasApp/frontEnd\zonas\zonasService.js"></script>
+    <script type="text/javascript" src="estadisticasApp/frontEnd\recorridos\recorridosService.js"></script>
+    <script type="text/javascript" src="estadisticasApp/frontEnd\empleados\empleadosService.js"></script>
+    <script type="text/javascript" src="estadisticasApp/frontEnd\common\estadisticasApp.js"></script>
+    <script type="text/javascript" src="estadisticasApp/frontEnd\estadisticas\estadisticas.js"></script>
+    <script type="text/javascript" src="estadisticasApp/frontEnd\materiales\materiales.js"></script>
+    <script type="text/javascript" src="estadisticasApp/frontEnd\zonas\zonas.js"></script>
+    <script type="text/javascript" src="estadisticasApp/frontEnd\map/seguimiento\seguimientoMapController.js"></script>
+    <script type="text/javascript" src="estadisticasApp/frontEnd\map/seguimiento\seguimientoEmpleado\mapSeguimientoEmpleadoController.js"></script>
+    <script type="text/javascript" src="estadisticasApp/frontEnd\estadisticas\sideBarEstadisticasController.js"></script>
+    <script type="text/javascript" src="estadisticasApp/frontEnd\estadisticas\estadisticasGeneralesController.js"></script>
+    <script type="text/javascript" src="estadisticasApp/frontEnd\estadisticas\estadisticasOperarioController.js"></script>
+    <script type="text/javascript" src="estadisticasApp/frontEnd\materiales\sideBarMaterialesController.js"></script>
+    <script type="text/javascript" src="estadisticasApp/frontEnd\materiales\materialesContentController.js"></script>
+    <script type="text/javascript" src="estadisticasApp/frontEnd\materiales\materialesService.js"></script>
+    <script type="text/javascript" src="estadisticasApp/frontEnd\materiales\seguimientoMaterialesController.js"></script>
+    <script type="text/javascript" src="estadisticasApp/frontEnd\seguimiento\seguimientoController.js"></script>
+    <script type="text/javascript" src="estadisticasApp/frontEnd\seguimiento\sideBarSegPersonaController.js"></script>
+    <script type="text/javascript" src="estadisticasApp/frontEnd\zonas\zonasController.js"></script>
+  <!--  <script type="text/javascript" src="estadisticasApp/frontEnd\zonas\modal\modalController.js"></script> -->
+    <script type="text/javascript" src="estadisticasApp/frontEnd\claims\claimsService.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <!--<script type="text/javascript" src="estadisticasApp/frontEnd\otherScripts\Highcharts-4.1.9\js\highcharts.js"></script>-->
+    <script type="text/javascript" src="estadisticasApp/frontEnd\otherScripts\Highcharts-4.1.9\js\themes\dark-unica.js"></script>
+    <script type="text/javascript" src="estadisticasApp/frontEnd\zonas\zonasService.js"></script>
+    <script type="text/javascript" src="estadisticasApp/frontEnd\recorridos\recorridosService.js"></script>
+    <script type="text/javascript" src="estadisticasApp/frontEnd\common\filters\paginationFilter.js"></script>
+    <script type="text/javascript" src="estadisticasApp/frontEnd\zonas/mapZonasController.js"></script> 
+    <script type="text/javascript" src="estadisticasApp/frontEnd\empleados\empleadosService.js"></script>
+    <script type="text/javascript" src="estadisticasApp/frontEnd\materiales\modal\modalController.js"></script>
+    <script type="text/javascript" src="estadisticasApp/frontEnd\zonas\estadisticasZonasController.js"></script>
+    <script type="text/javascript" src="estadisticasApp/frontEnd\estadisticas\templates/rangedEstadisticasController.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjm485ADMarbtk9JSrEdmpnCELDjewLzo&libraries=drawing,geometry"></script>
+
+  </body>
+</html>

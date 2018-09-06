@@ -1,0 +1,42 @@
+<div class="nav navbar-inverse sideBar">
+  <div class="sideBarContent" >
+    <h3>Estadisticas</h3>
+    <ul>
+      <li class="sideBarLink"><a ui-sref="seguimiento.estadisticas"><img src="estadisticasApp/frontEnd/common/images/btn-estadisticas.gif" alt=""/></a></li>
+      <li class="sideBarLink"><a ui-sref="seguimiento.materiales"><img src="estadisticasApp/frontEnd/common/images/btn-materiales.gif" alt="" /></a></li>
+      <li class="sideBarLink"><a ui-sref="seguimiento"><img src="estadisticasApp/frontEnd/common/images/btn-seguimiento.gif" alt="" /></a></li>
+      <li class="sideBarLink"><a ui-sref="seguimiento.zonas"><img src="estadisticasApp/frontEnd/common/images/btn-zonas.gif" alt="" /></a></li>
+    </ul>
+    <hr>
+    <div class="">
+      <input class="form-control" ng-model="filtro" type="text" placeholder="Buscar">
+    </div>
+    <br>
+    <div align="right">
+      <span class="glyphicon glyphicon-sort-by-alphabet" style="color: white" aria-hidden="true" ng-click="sideBarEstadisticasController.sortBy('userLogin')"></span>
+    </div>
+    <div class="scroll">
+      <ul class="nav nav-stacked">
+        <div ng-repeat="empleado in sideBarEstadisticasController.personas | filter: filtro | orderBy:sideBarEstadisticasController.propertyName:sideBarEstadisticasController.reverse">
+          <label>{{empleado.userLogin}}</label>
+            <input class="pull-right" ng-model="sideBarEstadisticasController.personaSelected" name="persona" type="radio" value="{{empleado}}">
+        </div>
+      </ul>
+    </div>
+    <hr>
+
+    <div class="form-group">
+      <label for="">Desde</label>
+      <datetimepicker date-format="dd-MM-yyyy" show-meridian="false" ng-model="sideBarEstadisticasController.dateFrom"></datetimepicker>
+    </div>
+
+      <div class="form-group">
+        <label for="">Hasta</label>
+        <datetimepicker date-format="dd-MM-yyyy" show-meridian="false" ng-model="sideBarEstadisticasController.dateTo"></datetimepicker>
+      </div>
+
+      <input type="button" ng-click="sideBarEstadisticasController.cambiarEstado()" value="Buscar" class="btn btn-default btn-lg form-control">
+  </div>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>

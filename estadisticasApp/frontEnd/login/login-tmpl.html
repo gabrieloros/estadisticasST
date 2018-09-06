@@ -1,0 +1,13 @@
+<form name="login" class="login">
+	<div class="form-group">
+    	<label>Usuario</label>
+   		 <input class="form-control" ng-model="loginController.credentials.usuario" name="usuario" ng-class="{'danger': nuevo.usuario.$invalid}" required type="text">
+   		 <span ng-if="login.usuario.$invalid && login.usuario.$dirty" class="label label-warning">Debe llenar el campo</span>
+ 	</div>
+ 	<div class="form-group">
+    	<label>Contraseña</label>
+   		 <input class="form-control" ng-model="loginController.credentials.pass" name="pass" ng-class="{'danger': login.pass.$invalid}" required type="password">
+   		 <span ng-if="login.pass.$invalid && login.pass.$dirty" class="label label-warning">Debe llenar el campo</span>
+ 	</div>
+ 	<button class="btn btn-default btn-lg" ng-click="loginController.login()" ng-if="!(login.$invalid)" type="button">Ingresar</button>
+</form>

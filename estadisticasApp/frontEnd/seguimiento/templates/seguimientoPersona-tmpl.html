@@ -1,0 +1,58 @@
+<div class="nav navbar-inverse sideBar1">
+  <div class="sideBarContent">
+    <h3>Seguimiento</h3>
+    <ul>
+      <li class="sideBarLink"><a ui-sref="seguimiento.estadisticas"><img src="estadisticasApp/frontEnd/common/images/btn-estadisticas.gif" alt=""/></a></li>
+      <li class="sideBarLink"><a ui-sref="seguimiento.materiales"><img src="estadisticasApp/frontEnd/common/images/btn-materiales.gif" alt="" /></a></li>
+      <li class="sideBarLink"><a ui-sref="seguimiento"><img src="estadisticasApp/frontEnd/common/images/btn-seguimiento.gif" alt="" /></a></li>
+      <li class="sideBarLink"><a ui-sref="seguimiento.zonas"><img src="estadisticasApp/frontEnd/common/images/btn-zonas.gif" alt="" /></a></li>
+    </ul>
+    <hr>
+    <label><small>{{sideBarSegPersonaController.dateFrom}} - {{sideBarSegPersonaController.dateTo}}</small></label>
+    <hr>
+    <div style="margin-top: 2px;">
+      <img class="imgPersona" src="estadisticasApp/frontEnd/common/images/perfil.jpg" alt="" />
+        <h3 style="display:inline; margin-left:15%"><small>{{sideBarSegPersonaController.empleado.userLogin}}</small></h3>
+    </div>
+    <ul nav nav-stacked>
+      <li>Tareas asignadas: {{sideBarSegPersonaController.tareasAsignadas}}</li>
+      <li>Tareas realizadas: {{sideBarSegPersonaController.tareasRealizadas}} <img alt="" class="pull-right" src="estadisticasApp/frontEnd/common/images/iconosEstadoReclamos/estado_ok.png"/></li>
+      <li>Tareas de baja: {{sideBarSegPersonaController.tareasBaja}} <img alt="" class="pull-right" src="estadisticasApp/frontEnd/common/images/iconosEstadoReclamos/estado_baja.png"/></li>
+      <li>En termino: {{sideBarSegPersonaController.enTermino}}</li>
+      <li>Fuera de termino: {{sideBarSegPersonaController.fueraDeTermino}}</li>
+      <li style="color: rgb(190, 223, 170)">Estuvo: {{sideBarSegPersonaController.reclamosRecorridos}} <img alt="" class="pull-right" src="estadisticasApp/frontEnd/common/images/iconosEstadoReclamos/estado_visto.png"/></li>
+      <li>Sin Ver: {{sideBarSegPersonaController.reclamosSinVer}} <img alt="" class="pull-right" src="estadisticasApp/frontEnd/common/images/iconosEstadoReclamos/estado_sinver.png"/></li>
+    </ul>
+    <table class="table">
+       <tr ng-repeat="claim in sideBarSegPersonaController.employeeClaims | paginationFilter: (sideBarSegPersonaController.currentPage - 1)* sideBarSegPersonaController.pageSize | limitTo: sideBarSegPersonaController.pageSize">
+         <td>{{claim.claim.code}}</td>
+
+         <td ng-controller="mapSeguimientoEmpleadoCtrl as mapController">
+           <input type="hidden" class="form-control" ng-model="oneCode" value= "{{$parent.claim.claim.code}}">
+
+           <button class="btn btn-default"
+                   ng-click="mapController.findClaim(claim.claim.code)"
+                   type="submit"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></button>
+
+         </td>
+
+         <td>{{claim.claim.claimaddress}}</td>
+         <td ng-class="{'claimStateBajaImg': claim.claim.stateid == 3,
+          'claimStateOkImg': claim.claim.stateid == 2 && claim.substateid == 3,
+          'claimStateSinVerImg': claim.substateid == 0,
+          claimStateVistoImg: claim.claim.stateid == 1 && claim.substateid != 0
+          }"></td>
+       </tr>
+    </table>
+
+    <input type="button" ng-click="sideBarSegPersonaController.exportar()" value="Exportar" class="btn btn-default btn-lg form-control">
+
+    <!-- paginacion -->
+    <div>
+
+     <uib-pagination total-items="sideBarSegPersonaController.totalItems" ng-model="sideBarSegPersonaController.currentPage" items-per-page="sideBarSegPersonaController.pageSize"></uib-pagination>
+   
+    </div>
+
+  </div>
+</div>

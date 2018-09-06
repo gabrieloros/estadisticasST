@@ -1,0 +1,29 @@
+<div class="">
+
+  <div class="nav navbar-inverse sideBar">
+    <div class="sideBarContent">
+
+      <h3>Zonas</h3>
+      <ul>
+        <li class="sideBarLink"><a ui-sref="seguimiento.estadisticas"><img src="estadisticasApp/frontEnd/common/images/btn-estadisticas.gif" alt="" /></a></li>
+        <li class="sideBarLink"><a ui-sref="seguimiento.materiales"><img src="estadisticasApp/frontEnd/common/images/btn-materiales.gif" alt="" /></a></li>
+        <li class="sideBarLink"><a ui-sref="seguimiento"><img src="estadisticasApp/frontEnd/common/images/btn-seguimiento.gif" alt="" /></a></li>
+        <li class="sideBarLink"><a ui-sref="seguimiento.zonas"><img src="estadisticasApp/frontEnd/common/images/btn-zonas.gif" alt="" /></a></li>
+      </ul>
+      <hr>
+      <div class="form-group">
+        <label for="">Desde</label><br>
+        <datetimepicker date-format="dd-MM-yyyy" show-meridian="false" ng-model="zonasController.dateFrom"></datetimepicker>
+      </div>
+
+        <div class="form-group">
+          <label for="">Hasta</label><br>
+          <datetimepicker date-format="dd-MM-yyyy" show-meridian="false" ng-model="zonasController.dateTo"></datetimepicker>
+        </div><br>
+        <div>
+          <input type="button" ng-click="zonasController.changeState()" class="btn btn-default btn-lg form-control" value="Enviar">
+          <input type="button" class="btn btn-default btn-lg form-control" value="Exportar">
+        </div>
+    </div>
+  </div>
+</div>
